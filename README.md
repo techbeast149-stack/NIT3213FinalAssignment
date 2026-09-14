@@ -4,12 +4,12 @@ An Android application demonstrating API integration, dependency injection, and 
 
 ## Features
 
-- **Login screen** — authenticates against the `vu-nit3213-api` (footscray endpoint)
-- **Dashboard screen** — displays a list of entities fetched from the API using a RecyclerView
-- **Details screen** — shows full information for a selected entity
-- **Dependency Injection** — implemented with Hilt
-- **Networking** — Retrofit + Moshi + OkHttp
-- **Unit tests** — ViewModel tests using JUnit, MockK, and kotlinx-coroutines-test
+- **Login screen** - authenticates against the `vu-nit3213-api` (footscray endpoint)
+- **Dashboard screen** - displays a list of entities fetched from the API using a RecyclerView
+- **Details screen** - shows full information for a selected entity
+- **Dependency Injection** - implemented with Hilt
+- **Networking** - Retrofit + Moshi + OkHttp
+- **Unit tests** - ViewModel tests using JUnit, MockK, and kotlinx-coroutines-test
 
 ## Tech Stack
 
