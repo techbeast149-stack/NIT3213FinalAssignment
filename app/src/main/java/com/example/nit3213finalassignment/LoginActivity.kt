@@ -44,5 +44,16 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         }
+
+        lifecycleScope.launch {
+            viewModel.keypassState.collect { keypass ->
+                if (keypass != null) {
+                    val intent = Intent(this@LoginActivity, DashboardActivity::class.java)
+                    intent.putExtra("keypass", keypass)
+                    startActivity(intent)
+                    viewModel.clearKeypassState()
+                }
+            }
+        }
     }
 }

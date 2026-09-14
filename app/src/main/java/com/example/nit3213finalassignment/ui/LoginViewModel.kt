@@ -26,10 +26,17 @@ class LoginViewModel @Inject constructor(
             try {
                 val response = repository.login(LoginRequest(username, password))
                 _keypassState.value = response.keypass
+            } catch (e: retrofit2.HttpException) {
+                _errorState.value = "Incorrect username or password. Please try again."
+            } catch (e: java.io.IOException) {
+                _errorState.value = "Unable to connect. Check your internet connection."
             } catch (e: Exception) {
-                _errorState.value = "Login failed: ${e.message}"
+                _errorState.value = "Something went wrong. Please try again."
             }
         }
+    }
+    fun clearKeypassState() {
+        _keypassState.value = null
     }
 
 }
